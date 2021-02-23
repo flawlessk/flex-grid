@@ -95,7 +95,7 @@ h2 {
 }
 .main-content-hoodie {
     background-image: url(../pictures/hoodie.png);
-    background-position: 100%;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -212,4 +212,166 @@ h4 {
 .goup a:hover {
     background-color: white;
     color:black;
+}
+/* RESPONSIVE */
+.navbar-responsive {
+    display: none;
+}
+.main-content-responsive {
+    display: none;
+}
+@media  (max-width: 1024px) {
+    #header {
+        background-color: purple;
+    }
+    .navbar {
+        display: none;
+    }
+    .navbar-responsive {
+        display: inherit;
+    }
+    .navbar-ul-responsive {
+        display: flex;
+        justify-content: center;
+        padding: 100px 0;
+    }
+    .navbar-li-responsive a {
+        text-decoration: none;
+        padding: 0 50px;
+        font-size: 25px;
+        color: aqua;
+    }
+    .navbar-li-responsive a:hover {
+        cursor: pointer;
+        color: yellow;
+        text-decoration: underline;
+    }
+
+}
+@media (max-width: 768px) {
+    .section {
+        background-image: url(../pictures/background-responsive.jpg);
+    }
+    h2 {
+        font-size: 30px;
+        color: aqua;
+        font-weight: 900;
+    }
+    .section-sale-label {
+        font-size: 28px;
+        color: aqua;
+        font-weight: 900;
+        transition: transform .2s;
+    }
+    .section-sale-label:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        transform: scale(1.5);
+        color: yellow;
+    }
+}
+@media (max-width: 375px) {
+    .main-content {
+        display: none;
+    }
+
+    .main-content-responsive {
+        display: inherit;
+        grid-area: product;
+        margin: 0 20px;
+    }
+    .main-content-hoodies-responsive {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 0.3fr;
+        grid-auto-rows: 175px;
+    }
+    .main-content-hoodie-responsive {
+        background-image: url(../pictures/hoodie-responsive.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .main-content-ul-responsive {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 0.5fr;
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas: 
+            "one"
+            "two"
+            "three"
+            "four"
+            "five"
+            "six"
+            "seven"
+            "eight"
+            "nine"
+            "ten";
+    }
+    .main-content-li-responsive {
+        background-image: url(../pictures/hokage.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover ;
+        display: flex;
+        align-items: flex-end;
+    }
+    .main-content-li-responsive a {
+        text-decoration: none;
+        padding: 5px;
+        color: aqua;
+        font-size: 15px;
+    }
+    .main-content-li-responsive a:hover {
+        text-decoration: underline;
+        color: yellow;
+    }
+    .main-content-li-responsive:nth-child(1) {
+        grid-area: one;
+    }
+    .main-content-li-responsive:nth-child(2) {
+        grid-area: two;
+    }
+    .main-content-li-responsive:nth-child(3) {
+        grid-area: three;
+    }
+    .main-content-li-responsive:nth-child(4) {
+        grid-area: four;
+    }
+    .main-content-li-responsive:nth-child(5) {
+        grid-area: five;
+    }
+    .main-content-li-responsive:nth-child(6) {
+        grid-area: six;
+    }
+    .main-content-li-responsive:nth-child(7) {
+        grid-area: seven;
+    }
+    .main-content-li-responsive:nth-child(8) {
+        grid-area: eight;
+    }
+    .main-content-li-responsive:nth-child(9) {
+        grid-area: nine;
+    }
+    .main-content-li-responsive:nth-child(10) {
+        grid-area: ten;
+    }
+    h4 {
+        font-size: 25px;
+        color: yellow;
+        padding-bottom: 20px;
+    }
+    .footer-contacts-li {
+        padding-bottom: 30px;
+    }
+    .footer-contacts-li a {
+        text-decoration: none;
+        font-size: 18px;
+        color: aqua;
+    }
+    .footer-contacts-li a:hover {
+        color: yellow;
+        text-decoration: underline;
+    }
 }
