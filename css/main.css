@@ -273,6 +273,7 @@ h4 {
 @media (max-width: 375px) {
     #header {
         grid-area: header;
+        margin: 2px;
         padding: 5px;
         background-color: purple;
         max-width: 376px;
@@ -312,6 +313,9 @@ h4 {
         cursor: pointer;
         color: yellow;
         text-decoration: underline;
+    }
+    .section {
+        margin: 0 2px;
     }
     .main-content {
         display: none;
