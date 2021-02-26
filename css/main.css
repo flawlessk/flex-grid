@@ -20,7 +20,7 @@ button {
     padding: 20px;
     background-color: rgb(209, 0, 28);
 }
-.header-top-part {
+.header__top-part {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,10 +28,10 @@ button {
 h1 {
     font-size: 40px;
 }
-.header-input label {
+.header__input label {
     font-size: 20px;
 }
-.header-input input {
+.header__input input {
     font-size: 20px;
 }
 .navbar-ul {
@@ -67,13 +67,13 @@ h2 {
     color: yellow;
     font-weight: 900;
 }
-.section-sale-label {
+.section__sale--label {
     font-size: 28px;
     color: yellow;
     font-weight: 900;
     transition: transform .2s;
 }
-.section-sale-label:hover {
+.section__sale--label:hover {
     cursor: pointer;
     text-decoration: underline;
     transform: scale(1.5);
@@ -87,19 +87,19 @@ h2 {
     grid-area: product;
     margin: 0 20px;
 }
-.main-content-hoodies {
+.main__content-hoodies {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: 300px;
 }
-.main-content-hoodie {
+.main__content-hoodie {
     background-image: url(../pictures/hoodie.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.main-content-ul {
+.main__content-ul {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(4, 1fr);
@@ -110,7 +110,7 @@ h2 {
         "six seven eight eight"
         "nine ten eight eight";
 }
-.main-content-li {
+.main__content-li {
     margin: 10px;
     background-image: url(../pictures/hokage.jpg);
     background-position: center;
@@ -119,44 +119,44 @@ h2 {
     display: flex;
     align-items: flex-end;
 }
-.main-content-li a {
+.main__content-li a {
     text-decoration: none;
     padding: 5px;
     color: yellow;
     font-size: 25px;
 }
-.main-content-li a:hover {
+.main__content-li a:hover {
     text-decoration: underline;
     color: aqua;
 }
-.main-content-li:nth-child(1) {
+.main__content-li:nth-child(1) {
     grid-area: one;
 }
-.main-content-li:nth-child(2) {
+.main__content-li:nth-child(2) {
     grid-area: two;
 }
-.main-content-li:nth-child(3) {
+.main__content-li:nth-child(3) {
     grid-area: three;
 }
-.main-content-li:nth-child(4) {
+.main__content-li:nth-child(4) {
     grid-area: four;
 }
-.main-content-li:nth-child(5) {
+.main__content-li:nth-child(5) {
     grid-area: five;
 }
-.main-content-li:nth-child(6) {
+.main__content-li:nth-child(6) {
     grid-area: six;
 }
-.main-content-li:nth-child(7) {
+.main__content-li:nth-child(7) {
     grid-area: seven;
 }
-.main-content-li:nth-child(8) {
+.main__content-li:nth-child(8) {
     grid-area: eight;
 }
-.main-content-li:nth-child(9) {
+.main__content-li:nth-child(9) {
     grid-area: nine;
 }
-.main-content-li:nth-child(10) {
+.main__content-li:nth-child(10) {
     grid-area: ten;
 }
 /* FOOTER FLEX */
@@ -166,7 +166,7 @@ h2 {
     display: flex;
     justify-content: space-between;
 }
-.footer-contacts {
+.footer__contacts {
     padding: 50px;
 }
 h4 {
@@ -174,22 +174,22 @@ h4 {
     color: aqua;
     padding-bottom: 20px;
 }
-.footer-contacts-li {
+.footer__contacts-li {
     padding-bottom: 30px;
 }
-.footer-contacts-li a {
+.footer__contacts-li a {
     text-decoration: none;
     font-size: 18px;
     color: yellow;
 }
-.footer-contacts-li a:hover {
+.footer__contacts-li a:hover {
     color: aqua;
     text-decoration: underline;
 }
-.footer-socials {
+.footer__socials {
     padding: 50px;
 }
-.footer-social-icons img {
+.footer__social-icons img {
     width: 50px;
     padding: 0 20px;
 }
@@ -214,10 +214,10 @@ h4 {
     color:black;
 }
 /* RESPONSIVE */
-.navbar-responsive {
+.navbar__responsive {
     display: none;
 }
-.main-content-responsive {
+.main__content--responsive {
     display: none;
 }
 @media  (max-width: 1024px) {
@@ -227,21 +227,21 @@ h4 {
     .navbar {
         display: none;
     }
-    .navbar-responsive {
+    .navbar__responsive {
         display: inherit;
     }
-    .navbar-ul-responsive {
+    .navbar__ul--responsive {
         display: flex;
         justify-content: center;
         padding: 100px 0;
     }
-    .navbar-li-responsive a {
+    .navbar__li--responsive a {
         text-decoration: none;
         padding: 0 50px;
         font-size: 25px;
         color: aqua;
     }
-    .navbar-li-responsive a:hover {
+    .navbar__li--responsive a:hover {
         cursor: pointer;
         color: yellow;
         text-decoration: underline;
@@ -257,13 +257,13 @@ h4 {
         color: aqua;
         font-weight: 900;
     }
-    .section-sale-label {
+    .section__sale--label {
         font-size: 28px;
         color: aqua;
         font-weight: 900;
         transition: transform .2s;
     }
-    .section-sale-label:hover {
+    .section__sale--label:hover {
         cursor: pointer;
         text-decoration: underline;
         transform: scale(1.5);
@@ -271,28 +271,75 @@ h4 {
     }
 }
 @media (max-width: 375px) {
+    #header {
+        grid-area: header;
+        padding: 5px;
+        background-color: purple;
+        max-width: 376px;
+    }
+    .header__top-part {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    h1 {
+        font-size: 15px;
+    }
+    .header__input label {
+        font-size: 10px;
+    }
+    .header__input input {
+        font-size: 10px;
+    }
+    button {
+        font-size: 10px;
+    }
+    .navbar__responsive {
+        display: inherit;
+    }
+    .navbar__ul--responsive {
+        display: flex;
+        justify-content: center;
+        padding: 100px 0;
+    }
+    .navbar__li--responsive a {
+        text-decoration: none;
+        padding: 0 15px;
+        font-size: 15px;
+        color: aqua;
+    }
+    .navbar__li--responsive a:hover {
+        cursor: pointer;
+        color: yellow;
+        text-decoration: underline;
+    }
     .main-content {
         display: none;
     }
-
-    .main-content-responsive {
+    .main__content--responsive {
         display: inherit;
         grid-area: product;
-        margin: 0 20px;
+        margin: 0 40px;
     }
-    .main-content-hoodies-responsive {
+    .main__content-hoodies--responsive {
         display: grid;
         grid-gap: 10px;
         grid-template-columns: 0.3fr;
         grid-auto-rows: 175px;
     }
-    .main-content-hoodie-responsive {
+    .main__content-hoodie--responsive {
         background-image: url(../pictures/hoodie-responsive.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
-    .main-content-ul-responsive {
+    h2 {
+        font-size: 15px;
+    }
+    .section__sale--label {
+        font-size: 15px;
+    }
+    .main__content-ul--responsive {
         display: grid;
         grid-gap: 10px;
         grid-template-columns: 0.5fr;
@@ -309,7 +356,7 @@ h4 {
             "nine"
             "ten";
     }
-    .main-content-li-responsive {
+    .main__content-li--responsive {
         background-image: url(../pictures/hokage.jpg);
         background-position: center;
         background-repeat: no-repeat;
@@ -317,61 +364,78 @@ h4 {
         display: flex;
         align-items: flex-end;
     }
-    .main-content-li-responsive a {
+    .main__content-li--responsive a {
         text-decoration: none;
         padding: 5px;
         color: aqua;
         font-size: 15px;
     }
-    .main-content-li-responsive a:hover {
+    .main__content-li--responsive a:hover {
         text-decoration: underline;
         color: yellow;
     }
-    .main-content-li-responsive:nth-child(1) {
+    .main__content-li--responsive:nth-child(1) {
         grid-area: one;
     }
-    .main-content-li-responsive:nth-child(2) {
+    .main__content-li--responsive:nth-child(2) {
         grid-area: two;
     }
-    .main-content-li-responsive:nth-child(3) {
+    .main__content-li--responsive:nth-child(3) {
         grid-area: three;
     }
-    .main-content-li-responsive:nth-child(4) {
+    .main__content-li--responsive:nth-child(4) {
         grid-area: four;
     }
-    .main-content-li-responsive:nth-child(5) {
+    .main__content-li--responsive:nth-child(5) {
         grid-area: five;
     }
-    .main-content-li-responsive:nth-child(6) {
+    .main__content-li--responsive:nth-child(6) {
         grid-area: six;
     }
-    .main-content-li-responsive:nth-child(7) {
+    .main__content-li--responsive:nth-child(7) {
         grid-area: seven;
     }
-    .main-content-li-responsive:nth-child(8) {
+    .main__content-li--responsive:nth-child(8) {
         grid-area: eight;
     }
-    .main-content-li-responsive:nth-child(9) {
+    .main__content-li--responsive:nth-child(9) {
         grid-area: nine;
     }
-    .main-content-li-responsive:nth-child(10) {
+    .main__content-li--responsive:nth-child(10) {
         grid-area: ten;
     }
+    .footer {
+        grid-area: footer;
+        background-color: purple;
+        display: flex;
+        justify-content: space-between;
+        max-width: 376px;
+        margin: 5px 2px;
+    }
     h4 {
-        font-size: 25px;
+        font-size: 15px;
         color: yellow;
         padding-bottom: 20px;
     }
-    .footer-contacts-li {
+    .footer__contacts-li {
         padding-bottom: 30px;
     }
-    .footer-contacts-li a {
+    .footer__contacts-li a {
         text-decoration: none;
-        font-size: 18px;
+        font-size: 10px;
         color: aqua;
     }
-    .footer-contacts-li a:hover {
+    .footer__contacts-li a:hover {
         color: yellow;
         text-decoration: underline;
+    }
+    .goup a {
+        text-decoration: none;
+        color:white;
+        font-size: small;
+    }
+    .goup a:hover {
+        background-color: yellow;
+        color:black;
     }
 }
